@@ -1,82 +1,60 @@
-/* Estilo geral do corpo da página */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #eef2f3;
-    text-align: center;
-    color: #333;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-direction: column;
 }
 
-/* Estilo das mensagens */
-.message {
-    font-size: 26px;
-    color: #2c3e50;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: none;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    font-weight: bold;
-    letter-spacing: 1px;
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Estilo do botão de doação */
+h1 {
+    font-size: 2.5rem;
+    color: #0072ff;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+}
+
 .donate-btn {
-    display: none;
-    margin-top: 30px;
-    padding: 15px 40px;
-    font-size: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     color: white;
-    background-color: #1abc9c;
+    background-color: #0072ff;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Efeito hover no botão de doação */
 .donate-btn:hover {
-    background-color: #16a085;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #005bb5;
 }
 
-/* Estilo do rodapé */
-.footer {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 14px;
-    color: #95a5a6;
-    font-style: italic;
-}
-
-/* Animação de fade-in */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Tornar a página responsiva */
-@media (max-width: 768px) {
-    .message {
-        font-size: 22px;
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
     }
-
-    .donate-btn {
-        font-size: 18px;
-        padding: 12px 35px;
-    }
-
-    .footer {
-        font-size: 12px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

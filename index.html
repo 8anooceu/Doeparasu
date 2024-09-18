@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajude a Prof. Su</title>
+    <title>Vakinha para a Prof. Su</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Ajude a Prof. Su</h1>
-        <p>Sua ajuda pode fazer a diferença! Contribua para o tratamento do olho da Prof. Su.</p>
-        <a href="https://www.vakinha.com.br/5089205" target="_blank" class="btn">Doe Agora</a>
-    </div>
+    <div id="message1" class="message">Oie</div>
+    <div id="message2" class="message">Infelizmente a Suely está com Glaucoma...</div>
+    <div id="message3" class="message">Não tem cura nem cirurgia, somente tratamento.</div>
+    <div id="message4" class="message">O tratamento não é barato, por isso fizemos essa vakinha.</div>
+    <div id="message5" class="message">Com muito amor, 8° Ano ❤️</div>
+    <button id="donateBtn" class="donate-btn" onclick="window.location.href='https://www.vakinha.com.br/5089205'">Doar Agora</button>
+
+    <div class="footer">Feito com 🤍 por 8° Ano</div>
+
+    <script>
+        const messages = [
+            document.getElementById('message1'),
+            document.getElementById('message2'),
+            document.getElementById('message3'),
+            document.getElementById('message4'),
+            document.getElementById('message5')
+        ];
+        const donateBtn = document.getElementById('donateBtn');
+
+        let delay = 0;
+        messages.forEach((message, index) => {
+            setTimeout(() => {
+                message.style.display = 'block';
+            }, delay);
+            delay += 3000; // 3 segundos entre as mensagens
+        });
+
+        setTimeout(() => {
+            donateBtn.style.display = 'inline-block';
+        }, delay); // Exibe o botão após a última mensagem
+    </script>
 </body>
 </html>

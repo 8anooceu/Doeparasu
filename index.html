@@ -3,40 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vakinha para a Prof. Su</title>
+    <title>Doe para a Prof. Suely</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="message1" class="message">Oie</div>
-    <div id="message2" class="message">Infelizmente a Suely está com Glaucoma...</div>
-    <div id="message3" class="message">Não tem cura nem cirurgia, somente tratamento.</div>
-    <div id="message4" class="message">O tratamento não é barato, por isso fizemos essa vakinha.</div>
-    <div id="message5" class="message">Com muito amor, 8° Ano ❤️</div>
-    <button id="donateBtn" class="donate-btn" onclick="window.location.href='https://www.vakinha.com.br/5089205'">Doar Agora</button>
-
-    <div class="footer">Feito com 🤍 por 8° Ano</div>
+    <div class="container">
+        <h1>Ajude a Prof. Suely!</h1>
+        <p>Contribua para o tratamento do olho da nossa querida professora.</p>
+        <button id="donateBtn" class="donate-btn">Doe agora</button>
+    </div>
 
     <script>
-        const messages = [
-            document.getElementById('message1'),
-            document.getElementById('message2'),
-            document.getElementById('message3'),
-            document.getElementById('message4'),
-            document.getElementById('message5')
-        ];
-        const donateBtn = document.getElementById('donateBtn');
-
-        let delay = 0;
-        messages.forEach((message, index) => {
-            setTimeout(() => {
-                message.style.display = 'block';
-            }, delay);
-            delay += 1500; // 3 segundos entre as mensagens
+        document.getElementById('donateBtn').addEventListener('click', function() {
+            window.location.href = 'https://www.vakinha.com.br/5089205';
         });
-
-        setTimeout(() => {
-            donateBtn.style.display = 'inline-block';
-        }, delay); // Exibe o botão após a última mensagem
     </script>
 </body>
 </html>
